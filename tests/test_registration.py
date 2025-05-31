@@ -47,10 +47,4 @@ def test_autenficacia():
 
 def test_nonuser_autenficacia():
     assert authenticate_user('grigoriy_malcov','grigoriy_malcov.com') == False
-
-# def test_spisoc(setup_database, connection):
-#     cursor = connection.cursor()
-#     cursor.execute('SELECT username, email FROM users')
-#     cur = cursor.fetchall()
-#     assert display_users == print(f"Логин: {user[0]}, Электронная почта: {user[1]}") for user in cur 
             
