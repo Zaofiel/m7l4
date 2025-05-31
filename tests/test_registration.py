@@ -20,7 +20,6 @@ def connection():
     yield conn
     conn.close()
 
-
 def test_create_db(setup_database, connection):
     """Тест создания базы данных и таблицы пользователей."""
     cursor = connection.cursor()
@@ -43,8 +42,6 @@ def test_add_new_user_with_old_login():
 def test_autenficacia():
     add_user('test', 'test', 'test')
     assert authenticate_user('test','test')
-# Возможные варианты тестов:
-
 def test_nonuser_autenficacia():
     assert authenticate_user('grigoriy_malcov','grigoriy_malcov.com') == False
             
